@@ -35,15 +35,15 @@
      * @type {function}
      */
     template: _.template(
-      '<div class="ipe-category-picker-top"></div>' +
       '<div class="ipe-category-picker-bottom" tabindex="-1">' +
       '  <div class="ipe-categories"></div>' +
-            '<div class="ipe-category-picker-search">' +
-      '  <span class="ipe-icon ipe-icon-search"></span>' +
-      '  <input type="text" placeholder="<%= search_prompt %>" />' +
-      '  <input type="submit" value="' + Drupal.t('Search') + '" />' +
+      '  <div class="ipe-category-picker-search">' +
+      '    <span class="ipe-icon ipe-icon-search"></span>' +
+      '    <input type="text" placeholder="<%= search_prompt %>" />' +
+      '    <input type="submit" value="' + Drupal.t('Search') + '" />' +
+      '  </div>' +
       '</div>' +
-      '</div>'
+      '<div class="ipe-category-picker-top"></div>'
     ),
 
     /**
@@ -173,17 +173,17 @@
     toggleCategory: function (e) {
       var category = $(e.currentTarget).data('category');
 
-      var animation = false;
+      var action = false;
 
       // No category is open.
       if (!this.activeCategory) {
         this.activeCategory = category;
-        animation = 'slideDown';
+        action = 'open';
       }
       // The same category is clicked twice.
       else if (this.activeCategory === category) {
         this.activeCategory = null;
-        animation = 'slideUp';
+        action = 'close';
       }
       // Another category is already open.
       else if (this.activeCategory) {
@@ -191,18 +191,17 @@
       }
 
       // Trigger a re-render, with animation if needed.
-      if (animation === 'slideUp') {
+      if (action === 'close') {
         // Close the tab, then re-render.
         var self = this;
-        this.$('.ipe-category-picker-top')[animation]('fast', function () {
+        this.$('.ipe-category-picker-top').slideUp('fast', function () {
           self.render();
         });
       }
-      else if (animation === 'slideDown') {
+      else if (action === 'open') {
         // We need to render first as hypothetically nothing is open.
         this.render();
-        this.$('.ipe-category-picker-top').hide();
-        this.$('.ipe-category-picker-top')[animation]('fast');
+        this.$('.ipe-category-picker-top').hide().slideDown('fast');
       }
       else {
         this.render();
