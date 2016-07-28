@@ -414,10 +414,6 @@ div.ipe-actions-block {
   min-height: 70px;
 }
 
-.ipe-category-picker-bottom.top-open {
-  border-bottom: 1px solid #ccc;
-}
-
 .ipe-category-picker-top {
   display: none;
   overflow-y: scroll;
@@ -443,6 +439,8 @@ div.ipe-actions-block {
   display: inline-block;
   width: inherit;
   margin-left: 5px;
+  margin-bottom:10px;
+  margin-top:10px;
 }
 
 .ipe-category-picker-search input[type="text"] {
@@ -450,6 +448,7 @@ div.ipe-actions-block {
   border:none;
   border-bottom:1px solid #ccc;
   min-width:200px;
+
 }
 
 .ipe-category-picker-search input[type="submit"] {
@@ -463,8 +462,9 @@ div.ipe-actions-block {
 }
 
 #panels-ipe-tray .ipe-category {
- padding:15px;
+ padding:10px;
   border-right:1px solid #444;
+  vertical-align: bottom;
 }
 
 #panels-ipe-tray .ipe-category:last-child {
@@ -480,6 +480,7 @@ div.ipe-actions-block {
   font-size: 15px;
   transition: .2s;
   cursor: pointer;
+  max-height:52px;
 }
 
 .ipe-category h4, .ipe-category h5 {
@@ -495,14 +496,18 @@ div.ipe-actions-block {
   font-weight: normal;
 }
 
-.ipe-category:hover,.ipe-category.active {
+.ipe-category:hover {
   color: #fff;
-    border-top:3px solid #01579B;
+  border-top:3px solid #01579B;
+}
+
+.ipe-category.active {
+  background: #01579B;
 }
 
 /* Indicate an active block category with an arrow. */
 .ipe-category.active:after {
-  bottom: 100%;
+  top: 100%;
   left: 50%;
   border: solid transparent;
   content: " ";
@@ -514,7 +519,7 @@ div.ipe-actions-block {
 
 .ipe-category.active:after {
   border-color: transparent;
-  border-bottom-color: #80D8FF;
+  border-top-color: #01589b;
   border-width: 10px;
   margin-left: -10px;
 }
@@ -571,14 +576,15 @@ div.ipe-actions-block {
   position: relative;
   bottom: 0;
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   color: #000;
   font-size: 12px;
-  line-height: 1.5em;
+  line-height: 30px;
   min-height: 30px;
   width: 100%;
   padding-right: 20px;
   text-transform: capitalize;
+  margin-bottom:0px;
 }
 
 .ipe-blockpicker-item p {
@@ -586,7 +592,6 @@ div.ipe-actions-block {
 }
 
 .ipe-blockpicker-item a {
-  border: 1px solid #333;
   background: #FBFBFB;
   display: flex;
   flex-direction: column;
@@ -597,6 +602,11 @@ div.ipe-actions-block {
   transition: .2s;
   color: inherit;
   cursor: pointer;
+  line-height: 2em;
+}
+
+.ipe-blockpicker-item {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
 }
 
 .ipe-blockpicker-item a:after {

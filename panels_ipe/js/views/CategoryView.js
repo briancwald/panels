@@ -36,13 +36,13 @@
      */
     template: _.template(
       '<div class="ipe-category-picker-bottom" tabindex="-1">' +
-      '  <div class="ipe-categories"></div>' +
       '  <div class="ipe-category-picker-search">' +
       '    <span class="ipe-icon ipe-icon-search"></span>' +
       '    <input type="text" placeholder="<%= search_prompt %>" />' +
       '    <input type="submit" value="' + Drupal.t('Search') + '" />' +
       '  </div>' +
       '</div>' +
+      '  <div class="ipe-categories"></div>' +
       '<div class="ipe-category-picker-top"></div>'
     ),
 
