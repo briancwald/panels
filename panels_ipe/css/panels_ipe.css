@@ -34,15 +34,15 @@
   content: "\e902";
 }
 
-.ipe-icon.ipe-icon-change_template:before {
+.ipe-icon.ipe-icon-change_layout:before {
   content: "\e903";
 }
 
-.ipe-icon.ipe-icon-manage_layout:before {
+.ipe-icon.ipe-icon-edit:before {
   content: "\e883";
 }
 
-.ipe-icon.ipe-icon-add_content:before {
+.ipe-icon.ipe-icon-manage_content:before {
   content: "\e03c";
 }
 
@@ -107,6 +107,13 @@
   margin: 0;
 }
 
+.ipe-tab-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background: #2d2d2d;
+  border: none;
+  }
+
 /* Remove focus outlines on known elements, if they are otherwise indicated. */
 .ipe-tabs-content:focus,
 .ipe-tab a:focus,
@@ -135,29 +142,17 @@ a.ipe-layout:focus,
   position: relative;
   display: inline-block;
   vertical-align: bottom;
-  margin-bottom: -1px;
-  background-color: white;
-  border-top: 1px solid darkgray;
-  box-shadow: 3px -1px 2px 0 rgba(0, 0, 0, 0.3333);
+  background: transparent;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-top: 5px solid #2d2d2d;
 }
 
-.ipe-tab:first-child {
-  border-left: 1px solid darkgray;
-  border-top-left-radius: 5px;
-  box-shadow: -2px -1px 2px rgba(0, 0, 0, 0.3333);
-  right: -5px;
-}
-
-.ipe-tab:last-child {
-  border-right: 1px solid darkgray;
-  border-top-right-radius: 5px;
-  box-shadow: 2px -1px 2px rgba(0, 0, 0, 0.3333);
-}
 
 .ipe-tab a {
   font-size: 13px;
   text-transform: capitalize;
-  color: black;
+  color: #ccc;
   padding: 10px 15px 12px 5px;
   display: block;
   vertical-align: top;
@@ -165,14 +160,18 @@ a.ipe-layout:focus,
   cursor: pointer;
   transition: .2s;
   transition-property: color, border-color;
-  border-bottom: 1px solid darkgray;
+}
+
+.ipe-tab.active, .ipe-tab:hover {
+    background: #333;
 }
 
 .ipe-tab.active a, .ipe-tab a:hover {
-  padding-bottom: 10px;
-  color: rgb(67, 125, 33);
-  border: none;
-  border-bottom: 3px solid rgb(67, 125, 33);
+  color: #fff;
+}
+
+.ipe-tab-title {
+  display:block;
 }
 
 /* Indicate the cancel button. */
@@ -189,9 +188,13 @@ a.ipe-layout:focus,
 .ipe-tab-content {
   display: none;
   min-height: 100px;
-  padding: 20px 5px 10px 5px;
-  background-color: white;
-  border-top: 1px solid darkgray;
+  padding: 10px 5px 10px 5px;
+  background-color: #333;
+  color: #ccc;
+}
+
+.ipe-tab-content a {
+  color:#ccc;
 }
 
 .ipe-tab-content.active {
@@ -412,14 +415,24 @@ div.ipe-actions-block {
 }
 
 .ipe-category-picker-search {
-  border-bottom: 1px solid lightgray;
+  border:none;
   padding-bottom: 5px;
+}
+
+.ipe-category-picker-search:before {
+  color:#ccc;
 }
 
 .ipe-category-picker-search input {
   display: inline-block;
   width: inherit;
   margin-left: 5px;
+}
+
+.ipe-category-picker-search input[type="text"] {
+  background:transparent;
+  border:none;
+  border-bottom:1px solid #ccc;
 }
 
 .ipe-category-picker-search input[type="submit"] {

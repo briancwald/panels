@@ -15,7 +15,7 @@
     /**
      * @type {function}
      */
-    template: _.template('<div class="ipe-tab-wrapper"><div class="wayfinding-text"><span data-tooltip aria-haspopup="true" class="has-tip top" data-disable-hover="false" tabindex="2" title="A tool used for cutting crops."><i class="fa-2x fa fa-info-circle">info</i></span></div><div class="ipe-tab-insert"></div></div>'),
+    template: _.template('<div class="ipe-tab-wrapper"><div class="ipe-tab-insert"></div></div>'),
 
     /**
      * @type {function}
