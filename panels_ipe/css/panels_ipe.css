@@ -497,7 +497,7 @@ div.ipe-actions-block {
 
 .ipe-category:hover,.ipe-category.active {
   color: #fff;
-    border-bottom:3px solid #01579B;
+    border-top:3px solid #01579B;
 }
 
 /* Indicate an active block category with an arrow. */
