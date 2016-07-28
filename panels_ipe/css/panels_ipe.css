@@ -124,10 +124,6 @@ a.ipe-layout:focus,
   outline: none;
 }
 
-/* Add a box shadow to the IPE tabs. */
-.ipe-tabs-content {
-  box-shadow: 3px -1px 2px 0 rgba(0, 0, 0, 0.3333);
-}
 
 /* Remove list styling from the output of the TabsView. */
 .ipe-tabs {
@@ -164,6 +160,7 @@ a.ipe-layout:focus,
 
 .ipe-tab.active, .ipe-tab:hover {
     background: #333;
+    border-top:5px solid #03A9F4;
 }
 
 .ipe-tab.active a, .ipe-tab a:hover {
@@ -268,7 +265,7 @@ div.ipe-actions {
   justify-content: space-between;
   min-height: 20px;
   border-radius: 5px 5px 0 0;
-  background-color: rgb(222, 222, 222);
+  background-color: #424242;
   padding: 5px;
   margin-top: 1px;
   clear: both;
@@ -290,7 +287,19 @@ div.ipe-actions-block {
   text-transform: uppercase;
   font-weight: bold;
   margin: 0;
+  color:white;
 }
+
+.ipe-actions h5 {
+  font-size:14px;
+}
+
+.ipe-actions-block h5 {
+  color:black;
+  font-size: 12px;
+}
+
+
 
 .ipe-actions a {
   color: black;
@@ -400,7 +409,7 @@ div.ipe-actions-block {
 }
 
 .ipe-category-picker-bottom.top-open {
-  border-top: 1px solid darkgray;
+  border-bottom: 1px solid #ccc;
 }
 
 .ipe-category-picker-top {
@@ -420,7 +429,7 @@ div.ipe-actions-block {
 }
 
 .ipe-category-picker-search:before {
-  color:#ccc;
+  color:#4FC3F7;
 }
 
 .ipe-category-picker-search input {
@@ -451,13 +460,11 @@ div.ipe-actions-block {
 
 .ipe-category {
   position: relative;
-  color: black;
+  color: #ccc;
   display: inline-block;
   padding: 10px;
   text-transform: capitalize;
   font-size: 15px;
-  border: 1px solid transparent;
-  border-radius: 5px;
   transition: .2s;
   cursor: pointer;
 }
@@ -476,7 +483,6 @@ div.ipe-actions-block {
 }
 
 .ipe-category:hover,.ipe-category.active {
-  border-color: rgb(67, 125, 33);
   color: inherit;
 }
 
@@ -494,15 +500,13 @@ div.ipe-actions-block {
 
 .ipe-category.active:after {
   border-color: transparent;
-  border-bottom-color: rgb(67, 125, 33);
+  border-bottom-color: #80D8FF;
   border-width: 10px;
   margin-left: -10px;
 }
 
 /* Style the create button a bit differently than other categories. */
 .ipe-create-category {
-  border: 1px solid lightgray;
-  background: #FBFBFB;
 }
 
 .ipe-create-category:hover {
@@ -510,8 +514,8 @@ div.ipe-actions-block {
 }
 
 .ipe-category-count {
-  color: white;
-  background: black;
+  color: #333;
+  background: #E1F5FE;
   border-radius: 50%;
   margin-left: 5px;
   font-size: 10px;
