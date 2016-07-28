@@ -185,10 +185,12 @@ a.ipe-layout:focus,
 .ipe-tab-content {
   display: none;
   min-height: 100px;
-  padding: 10px 5px 10px 5px;
+  padding: 10px 5px 0px 5px;
   background-color: #333;
   color: #ccc;
 }
+
+
 
 .ipe-tab-content a {
   color:#ccc;
@@ -419,8 +421,9 @@ div.ipe-actions-block {
 
 .ipe-category-picker-top.active {
   display: block;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 20px 0;
   max-height: 100%;
+
 }
 
 .ipe-category-picker-search {
@@ -442,6 +445,7 @@ div.ipe-actions-block {
   background:transparent;
   border:none;
   border-bottom:1px solid #ccc;
+  min-width:200px;
 }
 
 .ipe-category-picker-search input[type="submit"] {
@@ -531,6 +535,10 @@ div.ipe-actions-block {
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: center;
+  background:#454545;
+  width:100%;
+  padding-left:5%;
+  padding-right:5%;
 }
 
 .ipe-category-picker-top.active.form-displayed {
@@ -604,10 +612,10 @@ div.ipe-actions-block {
   text-transform: uppercase;
   display: block;
   width: 100%;
-  border-bottom: 1px solid darkgray;
   padding: 5px;
   margin: 0 0 10px 0;
   font-size: 18px;
+  color:#fff;
 }
 
 /* Theme the block plugin and layout forms. */
@@ -616,6 +624,7 @@ div.ipe-actions-block {
   text-align: left;
   margin: 0 auto;
   display: inline-block;
+  background:#fff;
 }
 
 .ipe-form label {
