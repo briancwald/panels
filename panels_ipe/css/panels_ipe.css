@@ -160,7 +160,7 @@ a.ipe-layout:focus,
 
 .ipe-tab.active, .ipe-tab:hover {
     background: #333;
-    border-top:5px solid #03A9F4;
+    border-top:5px solid #29B6F6;
 }
 
 .ipe-tab.active a, .ipe-tab a:hover {
@@ -169,6 +169,10 @@ a.ipe-layout:focus,
 
 .ipe-tab-title {
   display:block;
+}
+
+[data-tab-id="cancel"] .ipe-tab-title {
+  display:block!important;
 }
 
 /* Indicate the cancel button. */
@@ -185,7 +189,7 @@ a.ipe-layout:focus,
 .ipe-tab-content {
   display: none;
   min-height: 100px;
-  padding: 10px 5px 0px 5px;
+  padding: 0px 5px 0px 5px;
   background-color: #333;
   color: #ccc;
 }
@@ -406,7 +410,7 @@ div.ipe-actions-block {
   overflow-x: scroll;
   white-space: nowrap;
   margin: auto;
-  padding: 20px 20px 0 20px;
+  padding: 0px 20px 0 20px;
   min-height: 70px;
 }
 
@@ -459,7 +463,12 @@ div.ipe-actions-block {
 }
 
 #panels-ipe-tray .ipe-category {
-  margin-right: 5px;
+ padding:15px;
+  border-right:1px solid #444;
+}
+
+#panels-ipe-tray .ipe-category:last-child {
+  border-right:none;
 }
 
 .ipe-category {
@@ -487,7 +496,8 @@ div.ipe-actions-block {
 }
 
 .ipe-category:hover,.ipe-category.active {
-  color: inherit;
+  color: #fff;
+    border-bottom:3px solid #01579B;
 }
 
 /* Indicate an active block category with an arrow. */
@@ -560,12 +570,14 @@ div.ipe-actions-block {
 .ipe-blockpicker-item h5 {
   position: relative;
   bottom: 0;
-  margin: 0;
   display: inline-block;
-  padding: 10px 20px 10px 10px;
+  padding: 10px;
+  color: #000;
   font-size: 12px;
   line-height: 1.5em;
-  font-weight: bold;
+  min-height: 30px;
+  width: 100%;
+  padding-right: 20px;
   text-transform: capitalize;
 }
 
@@ -599,7 +611,11 @@ div.ipe-actions-block {
 .ipe-blockpicker-item a:hover {
   background: white;
   border-color: rgb(67, 125, 33);
-  color: rgb(67, 125, 33);
+  color: #00B0FF;
+}
+
+.ipe-blockpicker-item a:hover h5 {
+  color: #00B0FF;
 }
 
 .ipe-block-content-type-info p {
