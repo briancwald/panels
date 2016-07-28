@@ -102,12 +102,12 @@
     var tab_collection = new Drupal.panels_ipe.TabCollection();
 
     if (settings.panels_ipe.layout.changeable) {
-      tab_collection.add(createTabModel(Drupal.t('Change Template'), 'change_layout'));
+      tab_collection.add(createTabModel(Drupal.t('Change Template'), 'change_template'));
     }
-    tab_collection.add(createTabModel(Drupal.t('Add Content'), 'manage_content'));
+    tab_collection.add(createTabModel(Drupal.t('Add / Place Content'), 'add_content'));
 
     // The edit/save/cancel tabs are special, and are tracked by our app.
-    var edit_tab = createTabModel(Drupal.t('Manage Layout'), 'edit');
+    var edit_tab = createTabModel(Drupal.t('Manage Layout'), 'manage_layout');
     var save_tab = createTabModel(Drupal.t('Save'), 'save');
     var cancel_tab = createTabModel(Drupal.t('Cancel'), 'cancel');
     tab_collection.add(edit_tab);

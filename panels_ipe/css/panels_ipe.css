@@ -34,16 +34,16 @@
   content: "\e902";
 }
 
-.ipe-icon.ipe-icon-change_layout:before {
+.ipe-icon.ipe-icon-change_template:before {
   content: "\e903";
 }
 
-.ipe-icon.ipe-icon-edit:before {
-  content: "\e904";
+.ipe-icon.ipe-icon-manage_layout:before {
+  content: "\e883";
 }
 
-.ipe-icon.ipe-icon-manage_content:before {
-  content: "\e905";
+.ipe-icon.ipe-icon-add_content:before {
+  content: "\e03c";
 }
 
 .ipe-icon.ipe-icon-create_content:before {
