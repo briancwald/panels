@@ -15,7 +15,7 @@
     /**
      * @type {function}
      */
-    template: _.template('<div class="ipe-tab-wrapper"></div>'),
+    template: _.template('<div class="ipe-tab-wrapper"><div class="wayfinding-text"><span data-tooltip aria-haspopup="true" class="has-tip top" data-disable-hover="false" tabindex="2" title="A tool used for cutting crops."><i class="fa-2x fa fa-info-circle">info</i></span></div><div class="ipe-tab-insert"></div></div>'),
 
     /**
      * @type {function}
@@ -98,7 +98,7 @@
       // Empty our list.
       this.$el.html(this.template(this.model.toJSON()));
       // Add our tab collection to the App.
-      this.tabsView.setElement(this.$('.ipe-tab-wrapper')).render();
+      this.tabsView.setElement(this.$('.ipe-tab-insert')).render();
 
       // If we have unsaved changes, add a special class.
       this.$el.toggleClass('unsaved', this.model.get('unsaved'));

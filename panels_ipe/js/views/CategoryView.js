@@ -35,14 +35,14 @@
      * @type {function}
      */
     template: _.template(
-      '<div class="ipe-category-picker-search">' +
+      '<div class="ipe-category-picker-top"></div>' +
+      '<div class="ipe-category-picker-bottom" tabindex="-1">' +
+      '  <div class="ipe-categories"></div>' +
+            '<div class="ipe-category-picker-search">' +
       '  <span class="ipe-icon ipe-icon-search"></span>' +
       '  <input type="text" placeholder="<%= search_prompt %>" />' +
       '  <input type="submit" value="' + Drupal.t('Search') + '" />' +
       '</div>' +
-      '<div class="ipe-category-picker-top"></div>' +
-      '<div class="ipe-category-picker-bottom" tabindex="-1">' +
-      '  <div class="ipe-categories"></div>' +
       '</div>'
     ),
 
@@ -106,10 +106,10 @@
       // Empty ourselves.
       var search_prompt;
       if (this.activeCategory) {
-        search_prompt = Drupal.t('Search current category');
+        search_prompt = Drupal.t('Search current category...');
       }
       else {
-        search_prompt = Drupal.t('Search all categories');
+        search_prompt = Drupal.t('Search all categories...');
       }
       this.$el.html(this.template({search_prompt: search_prompt}));
 

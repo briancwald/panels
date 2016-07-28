@@ -94,18 +94,18 @@
       this.renderCategories();
 
       // Flag the current layout.
-      var current_layout_text = '<p>' + Drupal.t('Current Layout') + '</p>';
+      var current_layout_text = '<p>' + Drupal.t('Current Template') + '</p>';
       this.$('[data-layout-id="' + current_layout + '"]').append(current_layout_text);
 
       // Prepend the current layout as its own category.
       this.$('.ipe-categories').prepend(this.template_category({
-        name: Drupal.t('Current Layout'),
+        name: Drupal.t('Current Template'),
         count: null,
-        active: this.activeCategory === 'Current Layout'
+        active: this.activeCategory === 'Current Template'
       }));
 
       // If we're viewing the current layout tab, show a custom item.
-      if (this.activeCategory && this.activeCategory == 'Current Layout') {
+      if (this.activeCategory && this.activeCategory == 'Current Template') {
         // Hide the search box.
         this.$('.ipe-category-picker-search').hide();
 
