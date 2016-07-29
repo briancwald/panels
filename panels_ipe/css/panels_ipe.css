@@ -462,6 +462,7 @@ div.ipe-actions-block {
 .ipe-category-picker-top {
   display: none;
   overflow-y: scroll;
+  transition: all .2s ease-in-out;
 }
 
 .ipe-category-picker-top.active {
@@ -543,13 +544,44 @@ div.ipe-actions-block {
 
 .ipe-category:hover {
   color: #fff;
-  border-top: 3px solid #01579B;
+  border-top: 3px solid #0277BD;
 }
 
 .ipe-category.active {
-  background: #01579B;
+  background: #0277BD;
+  color:#fff;
 }
 
+.ipe-blockpicker-item a[data-block-type] {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+.ipe-blockpicker-item a[data-block-type]:hover {
+  background:#01579B;
+  transition: all .2s ease-in-out;
+  color:#fff;
+}
+
+a[data-block-type]:before {
+  color:#333;
+  padding-right:0px;
+}
+
+a[data-block-type]:hover:before{
+  color:#fff;
+  padding-right:0px;
+}
+
+a[data-block-type] .ipe-block-content-type-info h5 {
+  padding-right:5px;
+  text-transform: uppercase;
+}
+
+a[data-block-type]:hover .ipe-block-content-type-info h5, a[data-block-type] h5:hover{
+  color:#fff;
+
+}
 
 /* Indicate an active block category with an arrow. */
 
@@ -566,19 +598,13 @@ div.ipe-actions-block {
 
 .ipe-category.active:after {
   border-color: transparent;
-  border-top-color: #01589b;
+  border-top-color: #0277BD;
   border-width: 10px;
   margin-left: -10px;
 }
 
 
 /* Style the create button a bit differently than other categories. */
-
-.ipe-create-category {}
-
-.ipe-create-category:hover {
-  background: white;
-}
 
 .ipe-category-count {
   color: #333;
@@ -595,6 +621,8 @@ div.ipe-actions-block {
 
 
 /* Display block picker elements in a flex grid. */
+
+
 
 .ipe-block-picker-list .ipe-category-picker-top.active {
   display: inline-flex;
@@ -622,6 +650,9 @@ div.ipe-actions-block {
   font-size: 12px;
 }
 
+.ipe-blockpicker-item h5:hover:after {
+color:#fff;
+}
 .ipe-blockpicker-item h5 {
   position: relative;
   bottom: 0;
@@ -635,6 +666,13 @@ div.ipe-actions-block {
   padding-right: 20px;
   text-transform: capitalize;
   margin-bottom: 0px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all .2s ease-in-out;
+}
+
+.ipe-blockpicker-item h5:hover, .ipe-blockpicker-item:hover h5{
+color:#fff!important;
+ background:#0277BD;
 }
 
 .ipe-blockpicker-item p {
