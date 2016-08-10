@@ -783,7 +783,7 @@ color:#fff!important;
 
 /* button styles */
 
-.button {
+.ipe-form .button {
   position: relative;
   display: block;
   margin: 30px auto;
