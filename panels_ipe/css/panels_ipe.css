@@ -758,6 +758,22 @@ color:#fff!important;
   display: inline-block;
   text-transform: uppercase;
   margin-right: 5px;
+  background:#fff;
+  color:#666;
+  font-weight:bold;
+  text-shadow:0 1px 0 #efefef;
+  background:#efefef;
+  padding: 5px 10px;
+  font-size:12px;
+}
+
+.ipe-form label:before, .ipe-form label:after  {
+  content:"-";
+  padding:0px 3px;
+}
+
+.ipe-form select {
+  border:3px solid #efefef;
 }
 
 .ipe-form summary {

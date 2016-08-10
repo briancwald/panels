@@ -107,7 +107,7 @@
     tab_collection.add(createTabModel(Drupal.t('Add / Place Content'), 'manage_content'));
 
     // The edit/save/cancel tabs are special, and are tracked by our app.
-    var edit_tab = createTabModel(Drupal.t('Manage Layout'), 'edit');
+    var edit_tab = createTabModel(Drupal.t('Modify Display'), 'edit');
     var save_tab = createTabModel(Drupal.t('Save'), 'save');
     var cancel_tab = createTabModel(Drupal.t('Cancel'), 'cancel');
     tab_collection.add(edit_tab);
