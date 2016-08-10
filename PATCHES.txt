@@ -9,10 +9,6 @@ Source: https://www.drupal.org/files/issues/panels--beta4-4c4a3a7--2747739-17--b
 Source: https://www.drupal.org/files/issues/2667754-3.patch
 
 
-Bandaid tempstore patch
-Source: https://www.drupal.org/files/issues/bandaid.patch
-
-
 2697587 - Wizard API integration
 Source: https://www.drupal.org/files/issues/2697587-48.patch
 

@@ -511,13 +511,4 @@ class PanelsDisplayVariant extends BlockDisplayVariant implements PluginWizardIn
     return $data;
   }
 
-  public function id() {
-    // Explicit IPE/Panelizer Support.
-    if (!empty($this->getContexts()['@panelizer.entity_context:entity']) && $this->getContexts()['@panelizer.entity_context:entity']->hasContextValue()) {
-      return $this->getContexts()['@panelizer.entity_context:entity']->getContextValue()->uuid();
-    }
-    // If the panelizer context isn't available, just return our uuid.
-    return parent::id();
-  }
-
 }
