@@ -217,12 +217,22 @@ a.ipe-layout:focus,
   color: #ccc;
 }
 
-.ipe-tab-content a {
-  color: #ccc;
+.ipe-form {
+  color:#333;
+}
+
+.ipe-form a.tabledrag-handle .handle {
+  width:25px;
+  margin-left:-5px;
+  height:25px;
 }
 
 .ipe-tab-content.active {
   display: block;
+}
+
+.ipe-categories a {
+  color: #ccc;
 }
 
 
@@ -786,8 +796,6 @@ color:#fff!important;
 .ipe-form .button {
   position: relative;
   display: block;
-  margin: 30px auto;
-  padding: 0;
   overflow: hidden;
   border-width: 0;
   outline: none;
@@ -871,6 +879,7 @@ color:#fff!important;
   box-shadow: none;
   height: 55px;
   font-weight: bold;
+  display:inline;
 }
 
 .ipe-form input[value="Toggle Preview"].button:hover {
